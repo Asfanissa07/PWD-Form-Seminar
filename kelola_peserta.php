@@ -4,7 +4,7 @@ include_once("koneksi.php");
 
 // Cek apakah admin sudah login
 if (!isset($_SESSION['admin_logged_in'])) {
-    header('Location: admin_login.php');
+    header('Location: index.php');
     exit;
 }
 
@@ -28,12 +28,14 @@ $result_deleted = mysqli_query($con, "SELECT * FROM registrasi WHERE is_deleted 
         }
         button[name='delete']{
             background-color: #dd085e;
+            margin-left: 3px;
         }
         button[name='restore']{
             background-color: #2069d8;
         }
         button[name='remove']{
             background-color: #dd085e;
+            margin-left: 3px;
         }
         button[name='back']{
             margin-top: 20px;
