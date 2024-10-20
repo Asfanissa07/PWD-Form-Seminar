@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = mysqli_real_escape_string($con, $_POST['password']);
 
     // Hard-coded login for admin, replace with a database query in real applications
-    if ($username == 'admin' && $password == '123') {
+    if ($username == 'admin' && $password == 'admin123') {
         $_SESSION['admin_logged_in'] = true;
         header('Location: admin_dashboard.php');
         exit;
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="form-container">
         <h1>Login Admin</h1>
-        <form action="admin_dashboard.php" method="POST">
+        <form action="index.php" method="POST">
         <div class="form-group">
             <table width="60%">
                 <tr>
